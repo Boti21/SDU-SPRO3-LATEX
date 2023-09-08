@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}
+\usepackage[legalpaper, portrait, margin=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{biblatex}
+%\addbibresource{bibliography/bibliography.bib}
+\usepackage{float}
+\usepackage{vhistory}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{svg}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\usepackage{multicol}
+\usepackage{setspace}
+\linespread{1.3} %One and a half line height (1.6 is double line height)
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+
+\usepackage{subfiles} % Always Load last
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{code_style}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=code_style}
+
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, filecolor=magenta, urlcolor=cyan}
+\urlstyle{same}
+
+
+\title{SPRO3 report}
+\date{08/09/2023}
+\author{Botond Bencsik\\Casper Hvide Bjerre Simenek\\Felix Leo Hoch\\Henrik Maarten Bongers\\Laura Barney}
+
+\pagestyle{fancy}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\setlength{\headheight}{13.59999pt}
+\addtolength{\topmargin}{-1.59999pt}
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+\section{Introduction}
+
+\section{Problem Formulation}
+
+\section{Management}
+
+\section{Consideration}
+
+\section{Electronics}
+
+\section{Mechanical}
+
+\section{Code}
+
+\section{Testing}
+
+\newpage
+\section{Appendix}
+
+%\begin{multicols}{2}
+%\subfile{Sections/glossary_of_terms.tex}
+%\end{multicols}
+
+
+\newpage
+%\printbibliography
+
+\end{document}
