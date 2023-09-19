@@ -1,0 +1,52 @@
+\documentclass[landscape]{article}
+
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{geometry}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+\section{Morphology chart}
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{\linewidth}{L|L|L|L|L|L}
+            \textbf{Functions} & \textbf{1} & \textbf{2}& \textbf{3} & 
+            \textbf{4} & \textbf{5} \\
+            \hline
+            \textbf{Navigation system} & Lines on the floor & GPS location + pallet detection & Preprogrammed map  & Sensor fusion (IMU + GPS) & 
+            Bluetooth RTLS \\
+            \hline
+            \textbf{Micro controller / processor} & Arduino nano & STM32xx & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Pallet recognition} & Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Coding standard} & Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Lift solution} & \cellcolor{lime} Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Motors} & Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Sensors x} & Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Sensors x} & Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Sensors x} & Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+            \textbf{Sensors x} & Option 1 & Option 2 & Option 3 & Option 4 & 
+            Option 5 \\
+            \hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+* Green cells indicates chosen option.
+\end{document}
