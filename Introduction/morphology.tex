@@ -5,6 +5,7 @@
 \usepackage{geometry}
 \usepackage[table]{xcolor}
 \usepackage{tabularx}
+\usepackage[table]{xcolor}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
 %\cellcolor{lime} coloring decisions
@@ -17,37 +18,37 @@
             \textbf{Functions} & \textbf{1} & \textbf{2}& \textbf{3} & 
             \textbf{4} & \textbf{5} \\
             \hline
-            \textbf{Navigation system} & Lines on the floor & GPS location + pallet detection & Preprogrammed map  & Sensor fusion (IMU + GPS) & 
+            \textbf{Navigation system} & \cellcolor{green!50}Lines on the floor & GPS location + pallet detection & \cellcolor{green!50}Preprogrammed map  & Sensor fusion (IMU + GPS) & 
             Bluetooth RTLS \\
             \hline
-            \textbf{Micro controller / processor} & Arduino nano & STM32xx & RaspberryPi& Option 4 & 
+            \textbf{Micro controller / processor} & Arduino nano & STM32xx & RaspberryPi& \cellcolor{green!50}E-ESP32 & 
             Option 5 \\
             \hline
-            \textbf{Pallet recognition} & Option 1 & Option 2 & Option 3 & Option 4 & 
-            Option 5 \\
+            \textbf{Pallet recognition} & \cellcolor{green!50}LoadCells & Hall Effect & buttons & Ultrasonic & 
+            photoelectric \\
             \hline
             \textbf{Coding standard} & Option 1 & Option 2 & Option 3 & Option 4 & 
             Option 5 \\
             \hline
-            \textbf{Mast Stage} & Simplex & Duplex & Triplex & Quadriplex & 
-            \\
+            \textbf{Mast Stage} & \cellcolor{green!50}Simplex & Duplex & Triplex & Quadriplex & 
+            -\\
             \hline
-            \textbf{Lift solution} & Linear Actuator & L.A + RollerChain & Threaded Rod& String\&Bearing & Rack\&Pineon \\
+            \textbf{Lift solution} & Linear Actuator & L.A + RollerChain & \cellcolor{green!50}Threaded Rod + linear bearings& String\&Bearing & Rack\&Pineon \\
             \hline
-            \textbf{Lifting sensing} & End stops Top\&Down & Encoder & Stepper Motors & Option 4 & 
-            Option 5 \\
+            \textbf{Lifting sensing} & \cellcolor{green!50}End stops Top\&Down & Encoder & Stepper Motors & \cellcolor{green!50}LoadCell & 
+            -\\
             \hline
-            \textbf{Motors} & Option 1 & Option 2 & Option 3 & Option 4 & 
-            Option 5 \\
+            \textbf{Motors} & \cellcolor{green!50}Stepper on Mast & \cellcolor{green!50}DC-Motors Movement & - & - & 
+            -\\
             \hline
-            \textbf{Sensors Fork} & Pressure (Weight) & Pallet recognition & Option 3 & Option 4 & 
-            Option 5 \\
+            \textbf{Sensors Fork} & \cellcolor{green!50}LoadCell & - & - & - & 
+            -\\
             \hline
-            \textbf{Sensors Body} & Ultrasonic Distance HC-SR04 & Infrared Distance & LiDAR & Optical Sensors & 
-            Option 5 \\
+            \textbf{Sensors Body} & \cellcolor{green!50}Ultrasonic Distance HC-SR04 & \cellcolor{green!50}Infrared Sensors & LiDAR & Optical Sensors & 
+            -\\
             \hline
-            \textbf{Sensors x} & Option 1 & Option 2 & Option 3 & Option 4 & 
-            Option 5 \\
+            \textbf{Body design Elements} & \cellcolor{green!50}LCD & Tank tracks &\cellcolor{green!50}Perry the Forklift & \cellcolor{green!50}Googly Eyes & 
+            - \\
             \hline
         \end{tabularx}
     \end{center}
