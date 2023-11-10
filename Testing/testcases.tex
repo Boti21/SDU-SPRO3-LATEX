@@ -1,0 +1,77 @@
+\documentclass[../report.tex]{subfiles}
+%\graphicspath{{\subfix{../img/}}}
+
+\begin{document}
+\subsection{Test cases}
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{\linewidth}{c|L|L|L|c}
+            \multicolumn{5}{c}{Stage 1}\\
+            \hline
+            \textbf{\#} & \textbf{Objective} & \textbf{Steps} & \textbf{Expected result} & \textbf{P/F}\\
+            \hline
+            1.1&Forward movement&1.Flash stage 1 code 2.Place forklift down on
+            the floor 3.Press start&The
+            forklift moves forward a arbitrary distance\\\hline
+            1.2&Backward movement&---''---&The
+            forklift moves backward a arbitrary distance\\\hline
+            1.3&Forward right movement&---''---&The
+            forklift moves forward and right a arbitrary distance and angle\\\hline
+            1.4&Forward left movement&---''---&The
+            forklift moves forward and left a arbitrary distance and angle\\\hline
+            1.5&Stationary right turn&---''---&The
+            forklift turns right a arbitrary angle\\\hline
+            1.6&Stationary left turn&---''---&The
+            forklift turns left a arbitrary angle\\\hline
+            1.7&Read battery voltage&1.Measure the battery voltage with a
+            multimeter 2.Flash stage 1 code 3. Read displayed voltage in
+            display&The multimeter measurement and display value should be the
+            same with a tolerance of 2\%&\\\hline
+            1.8&Battery voltage low&---''---&The forklift should not start when
+            the start button is pressed. Instead it should prompt the user that
+            the battery needs to be charged.
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{\linewidth}{c|L|L|L|c}
+            \multicolumn{5}{c}{Stage 2}\\
+            \hline
+            \textbf{\#} & \textbf{Objective} & \textbf{Steps} & \textbf{Expected result} & \textbf{P/F}\\
+            \hline
+            2.1&Movement following the line path&1.Flash stage 2 code 2.Place the forklift on line 3.Press start&The forklift should
+            follow the line path when moving at a arbitrary speed.&\\\hline
+            2.2&Detected obstacle stop&---''---4.Place obstacle on path&The forklift
+            should stop before hitting the obstacle&\\\hline
+            2.3&Detected obstacle start&1.Run test case 2.2 first. 2.Remove obstacle for
+            the path&The forklift resumes it movement along the path&\\\hline
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabularx}{\linewidth}{c|L|L|L|c}
+            \multicolumn{5}{c}{Stage 3}\\
+            \hline
+            \textbf{\#} & \textbf{Objective} & \textbf{Steps} & \textbf{Expected result} & \textbf{P/F}\\
+            \hline
+            3.1&Move fork up&1.Flash stage 3 code 2.Place the forklift on line 3.Press start&&\\\hline
+            3.2&Move fork down&---''---&&\\\hline
+            3.3&Move fork to minimum&---''---&&\\\hline
+            3.4&Move fork to maximum&---''---&&\\\hline
+            3.5&Detected pallet&---''---&The forklift should detected and move
+            into position of the pallet&\\\hline
+            3.6&Move pallet up&---''---&The forklift should move the forks
+            under the pallet and move it up a arbitrary distance&\\\hline
+            3.7&Move with pallet&---''---&The forklift lift should move with
+            the pallet to the destination point along the path&\\\hline
+            3.7&Move pallet down&&The forklift lift should move the pallet down
+            to ground level
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+\end{document}
