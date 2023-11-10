@@ -1,18 +1,22 @@
 \documentclass[11pt]{article}
 \usepackage[legalpaper, portrait, margin=2cm]{geometry}
 \usepackage{fancyhdr}
-\usepackage{biblatex}
+%\usepackage{biblatex}
 %\addbibresource{bibliography/bibliography.bib}
 \usepackage{float}
 \usepackage{vhistory}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \graphicspath{{image/}}
 \usepackage{amsmath}
 \usepackage[hidelinks]{hyperref}
 \usepackage{listings}
 \usepackage{parskip}
 \usepackage{xcolor}
+\usepackage{lscape}
+\usepackage{geometry}
 \usepackage{tabularx}
+%\usepackage[table]{xcolor}
 \usepackage{svg}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \usepackage{multicol}
@@ -20,6 +24,7 @@
 \linespread{1.3} %One and a half line height (1.6 is double line height)
 \usepackage{wrapfig}
 \usepackage{pdfpages}
+\usepackage{subcaption}
 
 \usepackage{subfiles} % Always Load last
 
@@ -67,19 +72,21 @@
 \begin{document}
 \maketitle
 
-\newpage
+%\newpagex
 \tableofcontents
 \newpage
 \section{Introduction}
-    \subfile{Introduction/example.tex}     
+    \subfile{Introduction/introduction.tex}     
 \section{Problem Formulation}
-
+    \subfile{Problem Formulation/idontknowifthisisonlyproblemformulation.tex}
 \section{Management}
-
+    \begin{figure}[H]
+        \includegraphics[width=\textwidth]{Management/timeplan.png}
+    \end{figure}
 \section{Consideration}
-
+    
 \section{Electronics}
-
+    \subfile{Electronics/Research weight sensor.tex}
 \section{Mechanical}
 
 \section{Code}
