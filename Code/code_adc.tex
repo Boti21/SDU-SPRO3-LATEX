@@ -1,0 +1,23 @@
+\documentclass[../report.tex]{subfiles}
+\graphicspath{{\subfix{../image/}}}
+
+\begin{document}
+    \subsection{ADC}
+    When programming the ability to use a ADC (Analog to digital converter) to
+    read a analog value on the microprocessor is of crucial impotents. In our
+    project the ADC is use for reading values from our infrared and load
+    sensors. On the ESP32 a total of 18 ADC channels are available with a config
+    resolution options of 9,10,11 and 12-bits.
+    \subsubsection{Configuring}
+    The library
+    \begin{lstlisting}[language=c]
+        adc_oneshot_unit_handle_t adc1_handle;
+        adc_oneshot_unit_init_cfg_t init_config1 = {
+            .unit_id = ADC_UNIT_1,
+            .ulp_mode = ADC_ULP_MODE_DISABLE,
+        };
+        ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &adc1_handle));
+    \end{lstlisting}
+    \subsubsection{Reading}
+    
+\end{document}
