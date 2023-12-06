@@ -1,17 +1,8 @@
-\documentclass[11pt]{article}
-\usepackage[legalpaper, portrait, margin=2cm]{geometry}
-\usepackage{graphicx} %package for customizing pictures
-\usepackage{wrapfig}
-\usepackage{parskip}
-
-\title{Forklift functionality}
-\date{11/09/2023}
-\author{Felix}
-
+\documentclass[../report.tex]{subfiles}
+\graphicspath{{\subfix{../image/}}}
 
 \begin{document}
-\maketitle
-\section{Forklifts}
+\subsection{Forklifts}
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \includegraphics[width=0.35\textwidth]{../image/baltic.toyota-forklifts.jpeg}
@@ -26,13 +17,14 @@ The basic parts of the Counterbalanced forklift as seen in the picture.
     \begin{enumerate}
     \item fork
     \item mast
+    \graphicspath{{\subfix{../image/}}}
     \item drive and steering wheels 
     \item counterweight
     \item motor compartment
     \end{enumerate}
 \end{center}
-
-\section{Functionality}
+subsection
+\subsubsection{Functionality}
 For the functionality of forklifts there are two different subjects that concern us.
 For one the drive, which should make it possible to rotate 360° around the center axle
 and the lifting of the fork it self.
@@ -40,13 +32,13 @@ The amount of lifting is dependent on the type of forklift. Therefor the task of
 truck is lifting of the ground for simple 2 dimensional movement and other types need
 to be able to lift up to multiple pallets or meters, where also the name stacker derives from.
 
-\subsection{Lifting}
+\textbf{Lifting}
 The lifting mechanism works by actuating an actuator which is and hydraulic cylinder in this 
 case. A chain that is connected between an anchor, roller and the fork lifts the fork and by 
 making use of the leverage of this system the forklift can lift greater weights than when 
 connecting the fork directly to the actuator.
 
-\subsection{Driving}
+\textbf{Driving}
 On a forklift as seen in [\ref{fig:forklift}], the front wheels are connected to the drive
 while the back wheels are able to rotate 360° and only act for steering.
 
