@@ -1,13 +1,8 @@
-\documentclass{article}
+\documentclass[../report.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
 
-\title{Part Numbering System}
-\author{DaFork / Perry the forklift}
-\date{State: 17.09.2023}
-
-\begin{document}
-    \maketitle
-    
-    \section*{The System - Suggestion}
+\begin{document}    
+    \subsection{Part numbering}
     Part numbers begin with FL - indicating that they belong to our project (FL = Forklift). 
     The forklift is split into sections. For example, base, fork and top. These are just
     examples and we can adapt them when the time comes and we start designing.
@@ -23,14 +18,11 @@
 
     The general assembly is marked as \textbf{FL-AsX-xx}.
 
-    \section{Examples}
+    \subsubsection{Examples}
     Part number: 
     \begin{itemize}
         \item FL-BaM-00 - Project forklift - Base Model - version 0 (meaning original)
         \item FL-FoD-04 - Project forklift - Fork Drawing - version 4
     \end{itemize}
-
-    \section*{Further Suggestions}
-    If you have suggestions just let me know!    
 
 \end{document}
