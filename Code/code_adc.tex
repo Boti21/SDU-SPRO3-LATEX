@@ -9,8 +9,16 @@
     sensors. On the ESP32 a total of 18 ADC channels are available with a config
     resolution options of 9,10,11 and 12-bits.
     \subsubsection{Configuring}
-    The library
-    \begin{lstlisting}[language=c]
+    It is impotent to ensure when using RTOS that functions are Thread safe. If
+    not it can result in RTOS not being able to handle a task in the desired
+    time frame. For this reason we have chosen to use libraries that are
+    include in the ESP-IDF environment that are designed with thread safe in
+    mind. The particular library used to facilitate ADC is called
+    $esp\_adc/adc\_oneshot.h$ that replaced the previous one in version $5.0.4$ of
+    ESP-IDF. 
+
+    To configure a ADC unit:
+    \begin{lstlisting}[language=c, caption={Configuring ADC unit 1}]
         adc_oneshot_unit_handle_t adc1_handle;
         adc_oneshot_unit_init_cfg_t init_config1 = {
             .unit_id = ADC_UNIT_1,
