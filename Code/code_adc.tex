@@ -26,6 +26,31 @@
         };
         ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &adc1_handle));
     \end{lstlisting}
+
+    The program utilize handles to reference the objected throughout the
+    program. When $calling\ adc\_oneshot\_new\_unit$ a new instance is created with
+    the specified configuration. In a similar way the channels are configured
+    and created to the handle.
     \subsubsection{Reading}
+    To read the raw value of the ADC unit 1 channel 0:
+    \begin{lstlisting}[language=c, caption={Readning ADC unit 1 channel 0}]
+        adc_oneshot_read(adc1_handle, ADC1_0, &adc_value);
+    \end{lstlisting}
+    This function takes 3 augments: the handle itself, the desired channel to
+    read from and where the output should be stored.
+    This function can acquire the raw value from any ADC on the given unit as
+    long as they are configured.
+
+    To calculate the voltage level:
+    \begin{equation}
+        V_{out}=D_{out}*\dfrac{V_{max}}{D_max}
+    \end{equation}
     
+    Where:
+
+    $D_{out}$:
+
+    $V_{max}$:
+    
+    $D_{max}$:
 \end{document}
