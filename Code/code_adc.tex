@@ -11,7 +11,7 @@
     \subsubsection{Configuring}
     It is impotent to ensure when using RTOS that functions are Thread safe. If
     not it can result in RTOS not being able to handle a task in the desired
-    time frame. For this reason we have chosen to use libraries that are
+    time frame. For this reason the libraries that are
     include in the ESP-IDF environment that are designed with thread safe in
     mind. The particular library used to facilitate ADC is called
     $esp\_adc/adc\_oneshot.h$ that replaced the previous one in version $5.0.4$ of
@@ -43,14 +43,27 @@
 
     To calculate the voltage level:
     \begin{equation}
-        V_{out}=D_{out}*\dfrac{V_{max}}{D_max}
+        V_{out}=D_{out}*\dfrac{V_{max}}{D_{max}}
     \end{equation}
     
     Where:
 
-    $D_{out}$:
+    $D_{out}$: ADC raw digital reading result
 
-    $V_{max}$:
-    
-    $D_{max}$:
+    $V_{max}$: Max measurable analog input voltage 
+
+    $D_{max}$:$2^{bitwidth}$
+
+    \subsubsection{Implementation}
+The Analog-to-Digital Converter (ADC) is employed to convert analog signals
+from both the infrared and load cell sensors. The two infrared sensors
+collectively generate 16 analog outputs, while the load cell sensor contributes
+one. However, the specific ESP32 utilized in this project features only 12
+available ADC pins on the breakout board. This poses a constraint on the number
+of outputs from the infrared sensors that can be accommodated.
+
+In the context of the infrared sensors, the ADC value varies based on the
+reflective properties of the surface. To facilitate line-following, the program
+assesses the ADC values and executes movement actions based on the reflectivity
+of the surface for each sensor in the array.
 \end{document}
