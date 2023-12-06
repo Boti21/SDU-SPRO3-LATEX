@@ -55,15 +55,16 @@
     $D_{max}$:$2^{bitwidth}$
 
     \subsubsection{Implementation}
-The Analog-to-Digital Converter (ADC) is employed to convert analog signals
-from both the infrared and load cell sensors. The two infrared sensors
-collectively generate 16 analog outputs, while the load cell sensor contributes
-one. However, the specific ESP32 utilized in this project features only 12
-available ADC pins on the breakout board. This poses a constraint on the number
-of outputs from the infrared sensors that can be accommodated.
+    The Analog-to-Digital Converter (ADC) is employed to convert analog signals
+    from both the infrared and load cell sensors. The two infrared sensors
+    collectively generate 16 analog outputs, while the load cell sensor
+    contributes one. However, the specific ESP32 utilized in this project
+    features only 12 available ADC pins on the breakout board. This poses a
+    constraint on the number of outputs from the infrared sensors that can be
+    accommodated.
 
-In the context of the infrared sensors, the ADC value varies based on the
-reflective properties of the surface. To facilitate line-following, the program
-assesses the ADC values and executes movement actions based on the reflectivity
-of the surface for each sensor in the array.
+    In the context of the infrared sensors, the ADC value varies based on the
+    reflective properties of the surface. To facilitate line-following, the
+    program assesses the ADC values and executes movement actions based on the
+    reflectivity of the surface for each sensor in the array.
 \end{document}
