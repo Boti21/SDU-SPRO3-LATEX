@@ -3,29 +3,30 @@
 
 \begin{document}
     \subsection{FreeRTOS}
-    When designing a autonomous vehicle factors like: precise timing,
-    responsiveness, and predictability are crucial for the software.
-    If the software dose not process inputs from sensors fast enough it could
-    result in a accident. These factors can be forfeited by using a real-time
-    operating system like FreeRTOS. With RTOS task scheduling, actions like
-    stopping movement when a obstacle is blocking the way, is executed within a
-    specified time constraint. Meaning that the action of stopping the vehicle
-    is not blocked by another action, thus preventing accidents.
+    In the design of an autonomous vehicle, factors such as precise timing,
+    responsiveness, and predictability are crucial for the software. If the
+    software fails to process inputs from sensors quickly enough, it could lead
+    to an accident. These critical aspects can be addressed by utilizing a
+    real-time operating system (RTOS) like FreeRTOS. With RTOS task scheduling,
+    essential actions such as halting movement when an obstacle blocks the way
+    are executed within specified time constraints. This ensures that the
+    action of stopping the vehicle is not obstructed by other tasks, thus
+    preventing accidents.
 
     \subsubsection{The Espressif flavor}
-    One of the reasons we choose the ESP32 MCU was to utilize its capability
-    with FreeRTOS. The ESP32 liberty uses a custom made flavor made for the
-    ESP32 by Espressif. One of the key difference for this flavor is its
-    support for Dual-Core processors. Meaning that tasks can be distributed
-    across two cores, instead of the original one core support in FreeRTOS.
-    Another plus is the presents of a HAL, meaning that MCU change in the
-    ESP ecosystem is durable without the big code manuever.
-    time-consuming
+    One of the reasons we chose the ESP32 MCU was to leverage its capabilities
+    with FreeRTOS. The ESP32 uses a custom flavor of FreeRTOS made by
+    Espressif. A key difference for this custom flavor is its support for
+    Dual-Core processors. This means that tasks can be distributed across two
+    cores, as opposed to the original one core support in FreeRTOS. Another
+    advantage is the presence of a HAL, ensuring that MCU changes in the ESP
+    ecosystem are durable without the need for significant code maneuvers.
+
     \subsubsection{Development enviroment}
-    A familiar development environment is key for ensuring quality and
-    productivity coding. It is time-consuming to learn the way around a new
-    IDE, for this reason it is a big plus that Espressif have made a
-    interaction of there ESP-IDF into the VS-Code IDE. VS-Code is a IDE that
-    everyone that participate in the project are familiar with and it has a
-    wide variate of tools available to help development.
+    A familiar development environment is crucial for ensuring quality and
+    productivity in coding. Learning the ins and outs of a new Integrated
+    Development Environment (IDE) can be time-consuming. Therefore, it is a
+    significant advantage that Espressif has integrated their ESP-IDF into the
+    VS Code IDE. VS Code is an IDE familiar to everyone participating in the
+    project, and its extensive array of tools further facilitates development.
 \end{document}
