@@ -3,7 +3,6 @@
 
 \begin{document}
     \subsection{FreeRTOS}
-    \subsubsection{Why FreeRTOS}
     When designing a autonomous vehicle factors like: precise timing,
     responsiveness, and predictability are crucial for the software.
     If the software dose not process inputs from sensors fast enough it could
@@ -13,10 +12,20 @@
     specified time constraint. Meaning that the action of stopping the vehicle
     is not blocked by another action, thus preventing accidents.
 
-    \subsubsection{FreeRTOS flavor}
+    \subsubsection{The Espressif flavor}
     One of the reasons we choose the ESP32 MCU was to utilize its capability
     with FreeRTOS. The ESP32 liberty uses a custom made flavor made for the
     ESP32 by Espressif. One of the key difference for this flavor is its
     support for Dual-Core processors. Meaning that tasks can be distributed
     across two cores, instead of the original one core support in FreeRTOS.
+    Another plus is the presents of a HAL, meaning that MCU change in the
+    ESP ecosystem is durable without the big code manuever.
+    time-consuming
+    \subsubsection{Development enviroment}
+    A familiar development environment is key for ensuring quality and
+    productivity coding. It is time-consuming to learn the way around a new
+    IDE, for this reason it is a big plus that Espressif have made a
+    interaction of there ESP-IDF into the VS-Code IDE. VS-Code is a IDE that
+    everyone that participate in the project are familiar with and it has a
+    wide variate of tools available to help development.
 \end{document}
