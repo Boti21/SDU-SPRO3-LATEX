@@ -1,0 +1,54 @@
+\documentclass[../report.tex]{subfiles}
+\graphicspath{{\subfix{../image/}}}
+
+\begin{document}
+\subsection{Processing}
+    When considering what processing power to use in the project where embedded
+    system is wanted, there are to main candidates the microcontroller or the
+    microprocessor. There are different aspect of each processing power that
+    can be useful depending on what the project requires. 
+
+    There are some key difference between MCU and MPU:
+    \begin{itemize}
+        \item Lower Power Consumption (MCU)
+        \item Cheaper to Manufacture (MCU)
+        \item Better Suited for Highly Intensive Work (MPU)
+        \item Possibility to Utilize Cores (MPU)
+    \end{itemize}
+
+    Both options are well-suited for running real-time systems where the timing
+    of actions is essential.
+
+    For this particular project, the benefits of a Microcontroller Unit (MCU)
+    do not play a large role. When comparing the power consumption of the
+    Microprocessor Unit (MPU) next to the motors, the MPU uses minimal power in
+    comparison. The forklift consists of expensive parts, and most customers
+    won't mind the small increase in price for the extra functionality,
+    especially when they are already investing a significant amount.
+    
+    The critical aspect is the workload the processor can handle when running a
+    real-time system. This means that no compromises in safety or functionality
+    are required for the machine to operate effectively.
+
+    \subsubsection{Choosing the right MPU}
+    It was decide that the software should be designed with real-time system i
+    mind, because of the important of action taking place at the right time.
+    There are a wide variate of option available:
+    \begin{itemize}
+        \item STM32
+        \item RaspberryPi
+        \item ESP32
+        \item BeagleBone
+    \end{itemize} 
+    One of these options stands out—the ESP32. It is the most cost-effective
+    MPU available on the list while still offering the required features for
+    smooth real-time system operations. The ESP32 comes with a single processor
+    with two cores, distinguishing itself from some of the more expensive
+    options that have two processors with one core each. Although the
+    two-processor approach allows for a smoother experience, it comes with
+    increased programming complexity.
+
+    For the budget prototype, the ESP32 will do the job effectively. However,
+    for a potential continuation of the prototype, it should be considered
+    whether the STM32 might be a better option, given its potential advantages.
+\end{document}
