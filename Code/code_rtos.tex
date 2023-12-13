@@ -22,6 +22,57 @@
     advantage is the presence of a HAL, ensuring that MCU changes in the ESP
     ecosystem are durable without the need for significant code maneuvers.
 
+    Throughout this section some FreeRTOS native function are used. These
+    functions include:
+
+    \textbf{Tasks:}
+
+    \begin{lstlisting}[language=c,caption={FreeRTOS task creation},label={code:task}]
+        // Task to be created.Pointer that will be used as the parameter for the task being 
+        void vTaskCode( void * pvParameters )
+        {
+            for( ;; )
+            {
+                // Task code goes here.
+            }
+        }
+    \end{lstlisting}
+
+    There are a few things to notice that differ from a function in regular C
+    language. Firstly, the function name has a prefix of 'v,' where 'v' stands
+    for void, indicating that the function does not return anything. Another
+    notable aspect is the use of a 'for' loop. In this context, a task is
+    designed to run continuous operations, hence the inclusion of the forever
+    loop. It's important to highlight that, unlike native C, the forever loop
+    won't block other operations. The 'pv' prefix on the function parameter
+    indicates that the return type is a pointer to void. This parameter is used
+    to continuously pass values to the task throughout the program
+
+    \textbf{Creating task:}
+
+    \begin{lstlisting}[language=c,caption={Creating a task},label={code:task_create}]
+        xTaskCreate( vTaskCode, "NAME", STACK_SIZE, &ucParameterToPass, tskIDLE_PRIORITY, &xHandle );
+    \end{lstlisting}
+
+    When creating a task, several parameters need to be fulfilled. These
+    include:
+    \begin{itemize}
+        \item \textbf{vTestCode:} The task function to call, as seen in
+        listings \ref{code:task}.
+        \item \textbf{NAME:} A given name for the task..
+        \item \textbf{STACK\_SIZE:} The size of the task stack, specified in
+        bytes.
+        \item \textbf{ucParameterToPass:} A pointer to pass parameters to the
+        task.
+        \item \textbf{tskIDLE\_PRIORITY:} The priority at which tasks are run.
+        \item \textbf{xHandle:} The task handle by which the task can be
+        referred to.
+    \end{itemize}
+
+    The 'x' prefix in the function name indicates that the function returns a
+    value. In this case, it signifies the return of the handle, which is used
+    to reference to the task later on.
+
     \subsubsection{Development enviroment}
     A familiar development environment is crucial for ensuring quality and
     productivity in coding. Learning the ins and outs of a new Integrated
