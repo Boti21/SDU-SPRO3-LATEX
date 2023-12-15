@@ -19,4 +19,4 @@ When writing commit messages, keep them short and meaningful. For example, 'Upda
 By following the steps above, the chances of encountering merge conflicts should be minimized. If you're unsure about what you're doing, reach out to a more experienced team member for assistance.
 
 <h4>Clear your pending changes before pulling, pushing or syncing</h4>
-A comment mistake is to have pending local changes when trying to pull any new changes from the remote. This can simply be solved by either committing and pushing current changes or discard them. This can resolve in a error please see section "Remote push and pull (sync)".
+A common mistake is having pending local changes when trying to pull new changes from the remote. Easily resolve this by either committing and pushing your current changes or discarding them. Failure to do so may result in an error – refer to the 'Remote push and pull (sync)' section for guidance.
