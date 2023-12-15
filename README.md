@@ -17,3 +17,6 @@ When writing commit messages, keep them short and meaningful. For example, 'Upda
 
 <h4>Merge conflicts will happen</h4>
 By following the steps above, the chances of encountering merge conflicts should be minimized. If you're unsure about what you're doing, reach out to a more experienced team member for assistance.
+
+<h4>Clear your pending changes before pulling, pushing or syncing</h4>
+A comment mistake is to have pending local changes when trying to pull any new changes from the remote. This can simply be solved by either committing and pushing current changes or discard them. This can resolve in a error please see section "Remote push and pull (sync)".
