@@ -1,0 +1,33 @@
+\documentclass[../report.tex]{subfiles}
+\graphicspath{{\subfix{../image/}}}
+
+\begin{document}
+
+\subsection{Forklift Connectivity and Communication}
+
+\begin{table}[ht]
+\centering
+    \begin{tabularx}{\linewidth}{c|L|L|L|c}
+        \multicolumn{4}{c}{Options for connectivity}\\
+        \hline
+        \textbf{\#} & \textbf{Possible solution} & \textbf{Advantages} & \textbf{Disadvantages}\\
+        \hline
+        1.1&Bluetooth&
+        \begin{itemize}
+            \item Supported by ESP-IDF
+            \item Fast and wireless
+        \end{itemize}&
+        \begin{itemize}
+            \item Unlikely to be used by real world forklift (unless for navigation)
+            \item Low range
+        \end{itemize}
+        \hline
+        1.2&http-Server&
+        \\\hline
+        
+    \end{tabularx}
+\caption{Your caption here}
+\label{tab:my_label}
+\end{table}
+
+\end{document}
