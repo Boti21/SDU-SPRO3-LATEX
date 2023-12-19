@@ -4,7 +4,10 @@
 \begin{document}
 
 \subsection{Forklift Connectivity and Communication}
-
+To make the forklift usable as an distribution system, users should be
+able to communicate with the forklift other than by the means of code or 
+a wire connection. Hence, a wireless connection is desirable. The chosen
+microcontroller enables for different options for wire
 \begin{table}[ht]
 \centering
     \begin{tabularx}{\linewidth}{c|L|L|L|c}
@@ -21,13 +24,67 @@
             \item Unlikely to be used by real world forklift (unless for navigation)
             \item Low range
         \end{itemize}
-        \hline
-        1.2&http-Server&
         \\\hline
+        1.2&http-Server& \begin{itemize}
+            \item Supported by ESP-IDF
+            \item Fast and wireless
+            \item Simple and modifiable interface as Web-Page
+            \item More focus on the essential part while coding
+            \item Easy to run asynchronous
+        \end{itemize} & \begin{itemize}
+            \item Less security than https-Server 
+            \item requires WiFi-Network
+        \end{itemize} 
+        \\
+        \hline
+        1.3&https-Server& \begin{itemize}
+            \item Supported by ESP-IDF
+            \item Fast and wireless
+            \item Higher security than http-server
+            \item Simple and modifiable interface as Web-Page
+            \item Easy to run asynchronous
+        \end{itemize} & \begin{itemize}
+            \item More complicated to code than http
+            \item requires WiFi-Network
+        \end{itemize} 
+        \\
+        \hline
+        1.4&ESP-NOW
+        
+        Protocol for inter-board wireless communication
+        &\begin{itemize}
+            \item Supported by ESP-IDF
+            \item Fast and wireless
+            \item Long range (500m)
+        \end{itemize}
+        &
+        \begin{itemize}
+            \item Needs two ESP-boards - hence one connection to a PC meaning additional program
+            \item Not as much documentation available
+        \end{itemize}
         
     \end{tabularx}
-\caption{Your caption here}
+\caption{Wireless methods}
 \label{tab:my_label}
 \end{table}
+
+These four options are available for wireless communication. The choice 
+for wireless communication is the http-Server. The http-Server provides
+certain advantages over the other option listed in the table about wireless 
+methods. The two server options (http and https) provide the ability
+to run communication defacto in the background. Moreover,
+servers can host a webpage. A webpage is the perfect way to interface
+with the prototype forklift. Users of the distribution system
+can interface without needing to install additional software. 
+Furthermore, the interface can quickly be adapted to fit current
+needs without having to update the software on each employee's device that
+might need to specify a drop-off location.
+
+\quad
+
+\subsubsection{http-Server or https-Server}
+This project is not a coding-only or networking project. So a focus on the 
+implementation of the more sophisticated server protocol would
+be out off focus here. Moreover, there are no severe security concerns. 
 
 \end{document}
