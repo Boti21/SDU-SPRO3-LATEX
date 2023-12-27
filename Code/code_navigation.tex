@@ -1,0 +1,51 @@
+\documentclass[../report.tex]{subfiles}
+\graphicspath{{\subfix{../image/}}}
+
+\begin{document}
+
+\subsection{Navigation alternatives}
+The forklift has to find its way around in the real world. In the end it should
+according to the project requirements find and drive to a pallet space. 
+
+\textbf{Unfinished}
+\begin{table}[ht]
+    \centering
+        \begin{tabularx}{\linewidth}{c|L|L|L|c}
+            \multicolumn{5}{c}{Options for Navigation technology}\\
+            \hline
+            \textbf{\#} & \textbf{Possible solution} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{Hardware requirements}\\
+            \hline
+            1.1& Different colored lines on the floor &
+            \begin{itemize}
+                \item Different colored lines allow easy target management
+                \item Relatively simple algorithms for car control + obstacle avoidance
+                \item Cheap in price
+                \item Customer can put a custom pattern
+                \item Easy to test and debug
+            \end{itemize}&
+            \begin{itemize}
+                \item Calibration of color sensors - shifts with different light levels (Especially an issue at TekExpo)
+                \item Not as challenging academically - it has been done before
+                \item Not flexible - for long term changes the grid has to be redone
+            \end{itemize}
+            & Color sensor 80 to 140kr
+            \\
+            \hline
+            1.2& \textbf{Rough GPS location + pallet detection} Finding rough area in which the pallet
+            must be and then switch over to pallet
+            detection algorithm& \begin{itemize}
+                \item Learning about GPS and Gyroscopes
+                \item Flexible and adaptable to any warehouse - change/update of grid can be done remotely
+            \end{itemize} & \begin{itemize}
+                \item GPS indoors is not precise enough
+                \item pallet detection as a separate problem
+            \end{itemize} 
+            & GPS and gyroscope + anything for pallet detection
+            \\            
+        \end{tabularx}
+    \caption{Wireless methods}
+    \label{tab:my_label}
+    \end{table}
+    
+
+\end{document}
