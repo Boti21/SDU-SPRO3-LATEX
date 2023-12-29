@@ -5,5 +5,40 @@
 
 \subsection{Ultrasonic Sensors and Object Avoidance}
 Text about the implementation of the Ultrasonic sensors here.
+\begin{lstlisting}[language=c,caption={The Ultrasonic Code},label={code:ultrasonic}]
+    double distance_ultrasonic_1(void){
 
+    double distance_obs;
+    // Send a 10us pulse to the sensor's TRIG pin
+    gpio_set_level(TRIG_PIN_1, 1);
+    esp_rom_delay_us(10);
+    gpio_set_level(TRIG_PIN_1, 0);
+
+    ESP_LOGI("DisFunc", "Triggered");
+    // Wait for the signal to arrive to the Echo pin
+    while (gpio_get_level(ECHO_PIN_1) == 0);
+    
+    // Start timer 
+    gptimer_start(timer);
+    ESP_LOGI("DisFunc", "Started timer!");
+    
+    // While the pin Echo is high
+    while (gpio_get_level(ECHO_PIN_1) == 1);
+
+    // Stop timer
+    gptimer_stop(timer);
+
+    // Time that the pin ECHO is high 
+    uint64_t time_Echo_High;  // positive
+    gptimer_get_raw_count(timer, &time_Echo_High);  
+    gptimer_set_raw_count(timer, 0); // reset timer
+
+    // Distance in cm
+    distance_obs = (double)time_Echo_High / SOUND_SPEED_IN_US_PER_CM;
+
+    ESP_LOGI("DisFunc1", "DisFunc %f", distance_obs);
+
+    return distance_obs;
+}
+\end{lstlisting}
 \end{document}
