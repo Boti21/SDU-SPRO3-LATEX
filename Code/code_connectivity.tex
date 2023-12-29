@@ -72,11 +72,12 @@ are Bluetooth and WiFi. The table ``Options for connectivity'' displays them in 
 These four options are available for wireless communication. The choice 
 for wireless communication is the http-Server. The http-Server provides
 certain advantages over the other option listed in the table about wireless 
-methods. The two server options (http and https) provide the ability
+connectivity options. The two server options (http and https) provide the ability
 to run communication defacto in the background. Moreover,
 servers can host a webpage. A webpage is the perfect way to interface
 with the prototype forklift. Users of the distribution system
-can interface without needing to install additional software. 
+can interface without needing to install additional software. Moreover, this approach
+is also cross-platform. Any modern device with a web browser is compatible. 
 Furthermore, the interface can quickly be adapted to fit current
 needs without having to update the software on each employee's device that
 might need to specify a drop-off location.
@@ -84,7 +85,7 @@ might need to specify a drop-off location.
 \quad
 
 \subsubsection{http-Server or https-Server}
-This project is not a coding-only or networking project. So a focus on the 
+This project is not a coding-only nor a networking project. So a focus on the 
 implementation of the more sophisticated server protocol would
 be out off focus here. Moreover, there are no severe security concerns. Hence, the desired functionalities 
 are implemented using an http-Server.
@@ -96,10 +97,18 @@ university's network requires a verification by the use of an account. Implement
 from the side of the ESP32 microcontroller would be out of the scope of this project.
 A workaround is to let the microcontroller establish its own network. This can be 
 done by configuring the MCU as a softAP - a software enabled access-point. 
-Additionally, the ESP hosts a server. Devices connected to the softAP can then 
+Additionally, the ESP hosts a server. Devices connected to the softAP, the ESP's network, can then 
 communicate with the server.
 
-\subsubsection{Final implementation of wireless communication}
+\subsubsection{Final implementation of wireless communication - The backend}
+The final code enabling wireless connectivity can be found in the 
+FL_fork_connect.h header-file of the SPRO3-Firmware (https://github.com/Boti21/SDU-SPRO3-CODE/blob/dev/SPRO3-Firmware/main/FL_fork_connect.h).
+This provides the backend to the webpage: 192.168.4.1/forkconnect. 
+There the different handler-function for the different requests can be found.
 
+\subsubsection{The webpage - The frontend}
+The webpage is written in html and CSS. The webpage can also be found in the code 
+repository (https://github.com/Boti21/SDU-SPRO3-CODE/blob/dev/web_frontend/ForkConnect.html).
+It has a meta statement that causes the web browser to request a new version of the page.
 
 \end{document}
