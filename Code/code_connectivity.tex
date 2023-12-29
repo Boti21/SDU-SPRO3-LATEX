@@ -110,7 +110,7 @@ the http-Server will respond by sending a copy of the html webpage - which is st
 meantime constantly by the ``main''-program. Using C-string modifications as sprintf the sensor readings
 and decisions are being printed to the webpage. This in the current version displays the IR-sensor readings
 and the current decisions (like, for example, which correction is being made.) What in the end is being 
-%printed to the webpage can be easily decided by the user and adjusted in the ir\\_sensor\\_put\\_web\\-function.
+printed to the webpage can be easily decided by the user and adjusted in the \texttt{ir\_sensor\_put\_web-function}.
 Everything is secured by mutexes so that no data is written to the html, while the html is supposed
 to be sending and vice versa. 
 \begin{figure}[H]
@@ -121,7 +121,7 @@ to be sending and vice versa.
 \end{figure} 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{forkconnect_tekexpo.jpg}
+    \includegraphics[width=0.75\linewidth]{forkconnect_tekexpo.jpg}
     \caption{Demonstration at TEKExpo. Note the displayed sensor readings and decision.}
 \end{figure} 
 \subsubsection{The webpage - The frontend}
