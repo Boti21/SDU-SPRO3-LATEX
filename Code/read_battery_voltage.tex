@@ -1,0 +1,41 @@
+\documentclass[../report.tex]{subfiles}
+\graphicspath{{\subfix{../image/}}}
+
+\begin{document}
+
+\subsection{Read battery voltage}
+To read the battery voltage, first it is necessary to configure the ADC
+ channel of the ESP32 to read the voltage on the pin wanted, in this case the pin A6:
+
+ \begin{lstlisting}[language=c,caption={configure ADC channel},label={code:battery voltage}]
+    
+    adc_oneshot_config_channel(adc1_handle, ADC1_6 , &config);
+
+\end{lstlisting}
+
+Then, it is needed to read the raw digital value of the voltage on pin A6
+ and store it in the variable read battery voltage:
+
+\begin{lstlisting}[language=c,caption={ reading of the raw digital value},label={code:battery voltage}]
+    
+    adc_oneshot_read(adc1_handle, ADC1_6, &read_battery_voltage); // Dout = read_battery_voltage
+
+\end{lstlisting}
+
+To convert the raw digital value of the voltage to a floating-point value
+ representing the actual voltage level, the following line was written:
+
+\begin{lstlisting}[language=c,caption={ convert raw digital value to a floating point},label={code:battery voltage}]
+    
+    battery_voltage = (float)read_battery_voltage * 2.4 / 4095.0;;
+
+
+\end{lstlisting}
+
+It was used the formula    Vout= Dout* Vmax/Dmax Where Vout is the output voltage,
+ Dout is the raw digital reading result, Vmax is the maximum measurable input analog
+  voltage and Dmax is the maximum of the ouput ADC raw digital reading result. 
+  In this case, Vmax is 2.4 volts and Dmax is 4095. 
+
+
+\end{document}
