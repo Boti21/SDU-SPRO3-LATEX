@@ -5,40 +5,81 @@
 
 \subsection{Ultrasonic Sensors and Object Avoidance}
 Text about the implementation of the Ultrasonic sensors here.
-\begin{lstlisting}[language=c,caption={The Ultrasonic Code},label={code:ultrasonic}]
-    double distance_ultrasonic_1(void){
+The ultrasonic sensor uses sonar to determine the distance to an object. 
+The sensor reads from 2cm to 400 cm with an accuracy of 0.3cm. To calculate
+ the distance from the sensor to the object, a function in c was created. 
+ The function explained is the following:
 
-    double distance_obs;
+ \begin{lstlisting}[language=c,caption={The TRIG pin's Code},label={code:ultrasonic}]
+    
     // Send a 10us pulse to the sensor's TRIG pin
-    gpio_set_level(TRIG_PIN_1, 1);
-    esp_rom_delay_us(10);
-    gpio_set_level(TRIG_PIN_1, 0);
+    gpio_set_level(TRIG_PIN, 1);
+    ets_delay_us(10);
+    gpio_set_level(TRIG_PIN, 0);
 
-    ESP_LOGI("DisFunc", "Triggered");
-    // Wait for the signal to arrive to the Echo pin
-    while (gpio_get_level(ECHO_PIN_1) == 0);
+\end{lstlisting}
+
+The sound travels through the air. When it finds an object, 
+the waves come back to the sensor. 
+The ultrasound receiver (Echo pin) receives the reflected sound (echo):
+
+\begin{lstlisting}[language=c,caption={The ECHO pin's Code},label={code:ultrasonic}]
+    
+    // While the pin Echo is high
+    while (gpio_get_level(ECHO_PIN) == 1){
+
+        //  do nothing
+
+    }
+
+\end{lstlisting}
+
+Taking into account the sound’s velocity in the air (343 m/s) and the 
+time that the sound takes to go to the object and come back, the distance
+ to the object can be calculated with the following formula:
+distance to an object=((speed of the sound)*time)/2
+The same in code:
+
+\begin{lstlisting}[language=c,caption={The distance's Code},label={code:ultrasonic}]
+    
+    // Distance in cm
+    distance_obs = (double)time_Echo_High / SOUND_SPEED_IN_US_PER_CM;
+
+
+\end{lstlisting}
+
+To get the time that the Echo pin is high, the code below was used:
+
+\begin{lstlisting}[language=c,caption={code to get the time that ECHO is high},label={code:ultrasonic}]
+    
+    // Time that the pin ECHO is high 
+    uint32_t time_Echo_High;  // positive
+    gptimer_get_elapsed_time(timer, &time_Echo_High);
+
+
+\end{lstlisting}
+
+The timer was started when the Echo pin was set high, and it was
+ stopped when the Echo pin was low.
+
+ \begin{lstlisting}[language=c,caption={The timer's codeh},label={code:ultrasonic}]
     
     // Start timer 
     gptimer_start(timer);
-    ESP_LOGI("DisFunc", "Started timer!");
-    
+
     // While the pin Echo is high
-    while (gpio_get_level(ECHO_PIN_1) == 1);
+    while (gpio_get_level(ECHO_PIN) == 1){
+
+        //  do nothing
+
+    }
 
     // Stop timer
     gptimer_stop(timer);
 
-    // Time that the pin ECHO is high 
-    uint64_t time_Echo_High;  // positive
-    gptimer_get_raw_count(timer, &time_Echo_High);  
-    gptimer_set_raw_count(timer, 0); // reset timer
 
-    // Distance in cm
-    distance_obs = (double)time_Echo_High / SOUND_SPEED_IN_US_PER_CM;
 
-    ESP_LOGI("DisFunc1", "DisFunc %f", distance_obs);
-
-    return distance_obs;
-}
 \end{lstlisting}
+
+
 \end{document}
