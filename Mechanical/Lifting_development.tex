@@ -5,6 +5,29 @@
 \maketitle
 
 \subsection{Lifting Development}
+Through choosing the lead screw as a lifting solutions we have to find the
+the minimum torque our motor has to put out in order drive the screw under full load.
+As we got our lifting motor, the JGY370 sourced in the beginning of the semester without 
+any of the further calculations, this will also state if it will fit our project requirements.
 
+
+To find the Torque, which our Motor has to supply we derive from $Torque=Force*Distance$, where the 
+distance is the radius of the lead screw and the force is the force of the load divided by the Mechanical 
+Advantage gained through the lead screw. $F_{total}=F_{Load}/MA$
+
+\[F_{Load}=Mass*G=3.5kg*9.81\frac{m}{s}=34.34N\]
+
+The Mechanical Advantage is the product of Velocity Ratio and Efficiency dependent on the lead 
+angle. $MA=VR*E$ 
+
+\[VR=\frac{Circumference}{Lead}=\frac{(\pi*10)}{1}=15.7\]
+
+Efficiency shows the impact of friction on the system, which can be accounted for as as increase in lead angle of the threads 
+as in the ratio between angle and friction angle. A higher friction results therefore equally to adding more load in an ideal 
+system. The friction in this case is described as the \cite{friction_coefficient}[static 
+friction coefficient of hard steel on hard steel]. 
+
+\[friction_angle= atand(friction_coefficient)= atand(0.2)=\]
+\[E=\frac{tand(lead_angle)}{tand(lead_angle+friction_angle)}=\frac{tand(3.64)}{tand()}\]
 
 \end{document}
