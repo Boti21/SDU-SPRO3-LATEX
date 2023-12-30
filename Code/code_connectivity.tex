@@ -129,4 +129,25 @@ The webpage is written in html and CSS. The webpage can also be found in the cod
 repository (\url{https://github.com/Boti21/SDU-SPRO3-CODE/blob/dev/web_frontend/ForkConnect.html}).
 It has a meta statement that causes the web browser to request a new version of the page.
 The request will be answered by the http-Server. 
+
+In order to communicate with the forklift there were three options: via Bluetooth, via Wi-Fi or with 
+esp32 now. The esp32 can create a network where there is an access of a webpage where the user can 
+communicate with the forklift. The website was created in html and CSS. On the website, the user can 
+start and stop the forklift with two different buttons: 
+
+\begin{lstlisting}[language=html,caption={The buttons' Code},label={code:webpage}]
+    
+    <section class="hero">
+    <div class="hero-container">
+        <div class="column-left">
+            <h1>Connect to the forklift!</h1>
+            <p> You can start or stop the forklift pressing the buttons:</p>
+            <button class="button button1">START </button>
+            <button class="button button2">STOP </button>
+
+   
+
+\end{lstlisting}
+
+
 \end{document}
