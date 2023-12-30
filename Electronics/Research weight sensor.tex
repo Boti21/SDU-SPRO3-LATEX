@@ -50,7 +50,7 @@ Interfacing bears several challenges:
 \end{itemize}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.24\linewidth]{loadcell_testing.jpg}
+  \includegraphics[width=0.75\linewidth]{loadcell_testing.jpg}
   \caption{Testing the loadcells}
 \end{figure} 
 \subsection{Available Options}
@@ -58,14 +58,14 @@ Interfacing bears several challenges:
 In this section the available options to overcome these challenges are discussed.
 
 \begin{itemize}
-
+  
   \item HX711 Interface Module and load-cell
-  \item Wheatstone bridge - in different configuration
+  \item Wheatstone bridge - in different configurations
   \begin{itemize}
     \item With constant current source
     \item Without constant current source
   \end{itemize}
-
+  
 \end{itemize}
 
 \subsubsection{HX711 Interface Module and load-cell}
@@ -77,17 +77,28 @@ The illustration below depicts the HX711 interface module.
 
 
 \begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.4\linewidth}
-      \includegraphics[width=\linewidth]{image/HX711-Weighing-Sensor-Dual-Channel-24-Bit-Precision-A-D-Module-Pressure-Sensor_1.jpg}
-      \caption{HX711 Interface Module }
-    \end{subfigure}
-    \begin{subfigure}[b]{0.4\linewidth}
-      \includegraphics[width=\linewidth]{image/hx711-red.jpg}
-      \caption{HX711 Interface Module and Load cell using Arduino}
-    \end{subfigure}
-    
-    
-  \end{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{image/HX711-Weighing-Sensor-Dual-Channel-24-Bit-Precision-A-D-Module-Pressure-Sensor_1.jpg}
+    \caption{HX711 Interface Module }
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{image/hx711-red.jpg}
+    \caption{HX711 Interface Module and Load cell using Arduino}
+  \end{subfigure}
   
+  
+\end{figure}
+
+\subsubsection{Wheatstone bridge - in different configurations}
+
+Another option for getting valuable data about the weight from the loadcells
+is to make a wheatstone bridge and build a self designed amplifying circuit.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\linewidth]{loadcell_interface_ci.jpg}
+  \caption{Testing the loadcells}
+\end{figure} 
+
 \end{document}
