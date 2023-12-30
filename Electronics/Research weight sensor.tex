@@ -22,6 +22,7 @@ stress the budget.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{loadcellarray.png}
+  \caption{Assembly configuration of Loadcells}
 \end{figure}
 
 A kitchen scale rated for max. 5kg was bought. The four loadcells of this scale were taken to the lab and
@@ -104,6 +105,35 @@ focus this semester.
   \centering
   \includegraphics[width=0.75\linewidth]{loadcell_interface_ci.jpg}
   \caption{Potential setup using one loadcell and constant current source}
+\end{figure} 
+
+The loadcells are made of a bending material and strain gauges, which are resistive
+sensors that increase their resistance when tensioned and decrease when compressed.
+In the final design we went with using all 4 load cells in the wheatstone-bridge formation
+where 2 will get tensioned, 2 compressed and then wired inverted to create the biggest change
+in ratio once pressed. Or effectively creating two voltage dividers with one rising the voltage
+and the other one decreasing starting at the same point.
+
+From there we already got two stable output voltages with difference in the millivolt range, 
+which than had to be amplified.
+As the Ws-Bridge gives out two voltages we used the INA122p instrumentation amplifier and 
+configured it with a gain of 308 to have our maximum output voltage under full load just 
+under 2.5V which is the maximum adc input voltage for the ESP32.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{ampcircuit.png}
+  \caption{LoadCell Schematics}
+\end{figure} 
+
+The Ws-Bridge was then directly mounted onto the Mast-Assembly, while the amplifier circuit 
+was manufactured as a PCB and mounted on the base body.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.44\linewidth]{ampPCB.png}
+  \includegraphics[width=0.55\linewidth]{Ws-Bridge.png}
+  \caption{AmpPCB and Ws-Bridge}
 \end{figure} 
 
 \end{document}
