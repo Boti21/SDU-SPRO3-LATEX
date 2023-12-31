@@ -170,7 +170,8 @@ Through testing it has been determined that the output can be approximated
 by an ideal-straight line. The sensitivity has then be determined by putting no load
 and 500g (centered) on the fork. Then the corresponding conversion functions have been 
 implemented in code - see coding section.
-While calibrating it was also noticed that the gain of the op amp is to strong.
+While calibrating it was also noticed that the initial gain of the op amp is to strong as it 
+surpasses the ESP32´s ADC range.
 The weight of the fork itself biases the wheatstone bridge. This is, of course, also amplified.
 Thus, the gain resistor was adjusted slightly to decrease the gain.
 
