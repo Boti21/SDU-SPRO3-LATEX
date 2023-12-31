@@ -164,4 +164,23 @@ was manufactured as a PCB and mounted on the base body.
   \caption{AmpPCB and Ws-Bridge}
 \end{figure} 
 
+\subsubsection{Calibrating the output and slight adjustments}
+Of course the measured analog voltage has to be converted to a weight.
+Through testing it has been determined that the output can be approximated
+by an ideal-straight line. The sensitivity has then be determined by putting no load
+and 500g (centered) on the fork. Then the corresponding conversion functions have been 
+implemented in code - see coding section.
+While calibrating it was also noticed that the gain of the op amp is to strong.
+The weight of the fork itself biases the wheatstone bridge. This is, of course, also amplified.
+Thus, the gain resistor was adjusted slightly to decrease the gain.
+
+\quad
+When placing a 500g weight the converted result will oscillate between about 450g and 550g.
+This issue could be tackled by implementation of a digital filter - averaging. Prints of these testings
+can be found in the code repository.
+\quad
+
+The implementation did not just bring the team out of the comfort zone of premade modules, but
+also led to applying knowledge from the course Sensors and Actuators.
+
 \end{document}
