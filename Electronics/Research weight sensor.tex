@@ -3,12 +3,18 @@
 
 \begin{document}
 \subsection{Research and Evaluation for Loadcell-Interfacing}
+A Load Cell serves as a sensor that transforms applied force, encompassing pressure, rotational force, compression,
+or tension, into quantifiable electrical signals.
 
-\subsection{Choice of loadcells}
+\subsubsection{Choice of loadcells}
 
 One of the functionalities of the forklift is measuring the weight lifted.
 This serves the purpose of ensuring safe operations not only for customers, 
 but also preventing the forklift from tilting or damaging itself in one way or the other.
+
+In addition load cells inside the fork allow for a low level pallet detection, enabling 
+the forklift to drop off pallets at any height, for example on top of another pallet of undefined 
+dimensions. 
 
 In accordance to the set requirements, the forklift should at least lift 3.5kg.
 Hence, the loadcells should be able to withstand this weight. 
@@ -18,7 +24,6 @@ Not only does it give a insight into reverse engineering, but also provides bene
 insight in classifying unknown sensor characteristics. Furthermore, it does not 
 stress the budget. 
 
-\quad
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{loadcellarray.png}
@@ -28,20 +33,14 @@ stress the budget.
 A kitchen scale rated for max. 5kg was bought. The four loadcells of this scale were taken to the lab and
 their behavior was evaluated. 
 
-\quad
-
 Conclusion: The loadcells suit the application. They can not only withstand the
 required stress-requirements, but also work reliable. Moreover, they fulfill the 
 space requirements for the "small-scale" fork. Furthermore, they bring a considerable
 learning effect with them.
 
-\quad
-
 The next engineering challenge is interfacing these loadcells.
 These loadcells include two variable resistances. One of them increases
 with stress the other one decreases with stress. 
-
-\quad
 
 Interfacing bears several challenges:
 
@@ -57,7 +56,7 @@ Interfacing bears several challenges:
   \includegraphics[width=0.75\linewidth]{loadcell_testing.jpg}
   \caption{Testing the loadcells}
 \end{figure} 
-\subsection{Available Options}
+\subsubsection{Available Interface Options}
 
 In this section the available options to overcome these challenges are discussed.
 
@@ -74,9 +73,10 @@ In this section the available options to overcome these challenges are discussed
 
 \subsubsection{HX711 Interface Module and load-cell}
 
-A Load Cell serves as a sensor that transforms applied force, encompassing pressure, rotational force, compression, or tension, into quantifiable electrical signals.
-The load cell generates an output in millivolt range; therefore, it is essential to magnify this signal into a higher-level amplitude and subsequently convert it into a digital format for further processing.
-To accomplish this task, the HX711 interface module could be used. This was recommended by a professor. This module serves to amplify the load cell's low-voltage output and transmit it to the microcontroller for weight calculation. 
+The load cell generates an output in changing resistance; therefore, it is essential to magnify 
+this signal into a higher-level amplitude and subsequently convert it into a digital format for further processing.
+To accomplish this task, the HX711 interface module could be used. This was recommended by a professor. 
+This module serves to amplify the load cell's output into voltage and transmit it to the microcontroller for weight calculation. 
 The illustration below depicts the HX711 interface module.
 
 
@@ -107,7 +107,7 @@ focus this semester.
   \caption{Potential setup using one loadcell and constant current source}
 \end{figure} 
 
-\subsection{The decision}
+\subsubsection{The decision}
 It was decided to go with the wheatstone-bridge option - the main reason being
 the fundamental learning experience. Using a premade module would not give much 
 learning experience with analog sensors in the end. 
@@ -128,7 +128,7 @@ The following picture shows a first working prototype - back then the setup incl
 
 Nonetheless, the setup got improved 
 and extended to the final implementation:
-\subsection{Wheatstone bridge - The final implementation}
+\subsubsection{Wheatstone bridge - The final implementation}
 
 The loadcells are made of a bending material and strain gauges, which are resistive
 sensors that increase their resistance when tensioned and decrease when compressed.
