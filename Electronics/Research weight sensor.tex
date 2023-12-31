@@ -107,6 +107,29 @@ focus this semester.
   \caption{Potential setup using one loadcell and constant current source}
 \end{figure} 
 
+\subsection{The decision}
+It was decided to go with the wheatstone-bridge option - the main reason being
+the fundamental learning experience. Using a premade module would not give much 
+learning experience with analog sensors in the end. 
+
+\quad
+Thus, after the first step of the engineering method - evaluation of options -
+designs were made an tested.
+It also was decided to omit the constant current source, as this would have been an 
+overcomplicated setup. The calculations done showed that with a voltage source of 3.3V
+the current through the loadcells would not the range of a few mA. This was also backed
+by simulations of equivalent voltage dividers in LTSpice.
+The following picture shows a first working prototype - back then the setup included just one loadcell. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{first_prototype_loadcell.jpg}
+  \caption{First working prototype of the loadcell amplifier}
+\end{figure}
+
+Nonetheless, the setup got improved 
+and extended to the final implementation:
+\subsection{Wheatstone bridge - The final implementation}
+
 The loadcells are made of a bending material and strain gauges, which are resistive
 sensors that increase their resistance when tensioned and decrease when compressed.
 In the final design we went with using all 4 load cells in the wheatstone-bridge formation
@@ -125,6 +148,11 @@ under 2.5V which is the maximum adc input voltage for the ESP32.
   \includegraphics[width=0.85\linewidth]{ampcircuit.png}
   \caption{LoadCell Schematics}
 \end{figure} 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Ws-Bridge-wiring.png}
+  \caption{Wiring for achieving maximum potential difference}
+\end{figure}
 
 The Ws-Bridge was then directly mounted onto the Mast-Assembly, while the amplifier circuit 
 was manufactured as a PCB and mounted on the base body.
