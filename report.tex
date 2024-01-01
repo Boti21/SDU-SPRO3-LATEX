@@ -24,6 +24,7 @@
 \usepackage{wrapfig}
 \usepackage{pdfpages}
 \usepackage{subcaption}
+\usepackage{textcomp}
 
 \usepackage{subfiles} % Always Load last
 
@@ -59,7 +60,7 @@
 
 \title{SPRO3 Report}
 \date{08/09/2023}
-\author{Botond Bencsik\\Casper Hvide Bjerre Simenel\\Felix Leo Hoch\\Henrik Maarten Bongers\\Laura Barney\\Arthur Kibalama}
+\author{Botond Bencsik\\Casper Hvide Bjerre Simenel\\Felix Leo Hoch\\Henrik Maarten Bongers\\Laura Zanón Barney\\Arthur Kibalama}
 
 \pagestyle{fancy}
 \fancyhead[L]{\leftmark}
@@ -92,9 +93,10 @@
     robust plan. This section provides a detailed exploration of the methodologies
     employed to effectively manage project timelines, ensuring a strategic and
     well-coordinated effort towards successful project completion.
+    \subfile{Management/risk_assesment.tex}
     \subfile{Management/managment.tex}
-    \subfile{Management/stage_division.tex}
     \subfile{gantt_chart.tex}
+    \subfile{Management/stage_division.tex}
     \subfile{Management/individual_eva.tex}
 \section{Consideration} 
     To give a good overview over what option there a available for obtaining
@@ -116,15 +118,14 @@
     \subfile{Electronics/Research weight sensor.tex}
     \subfile{Electronics/ElectronicsWeightsensorInterface.tex}
     \subfile{Electronics/ElectronicsMotordriver.tex}
-   % \subfile{Electronics/Research weight sensor.tex}
-   % \subfile{Electronics/ElectronicsPowersupply.tex}
+    %\subfile{Electronics/ElectronicsPowersupply.tex}
 
 
 \section{Mechanical}
     \subfile{Mechanical/Manufacturing.tex} 
     \subfile{Mechanical/SPRO3-PartNumbering.tex}
-    \subfile{Mechanical/Versions.tex}
     \subfile{Mechanical/Assembly.tex}
+    \subfile{Mechanical/Versions.tex}
     \subfile{Mechanical/Lifting_development.tex}
     
 \section{Code}
@@ -137,6 +138,7 @@
     \subfile{Code/code_connectivity.tex}
     \subfile{Code/code_overall_code_structure.tex}
     \subfile{Code/code_pathfinding_alg.tex}
+    \subfile{Code/read_battery_voltage.tex}
 \section{Testing}
     In the dynamic landscape of project development, the validation of system
     functionalities stands as a critical phase, ensuring that each component
@@ -150,6 +152,7 @@
     detailed overview of our testing approach and outcomes.
     \subfile{Testing/how_test.tex}
     \subfile{Testing/testcases.tex}
+    \subfile{Management/risk_assessment_finalproduct.tex}
 \section{Conclusion}
 
 \newpage
@@ -159,6 +162,7 @@
 \subfile{glossary_of_terms.tex}
 
 \end{multicols}
+\subfile{Code/code_ultrasonic_full.tex}
 
 
 \newpage
