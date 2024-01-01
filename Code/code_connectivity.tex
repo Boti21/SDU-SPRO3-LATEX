@@ -107,7 +107,7 @@ This provides the backend to the webpage: \url{192.168.4.1/forkconnect}.
 There the different handler-function for the different requests can be found.
 When a device tries to connect to the forkconnect-webpage while being in the network,
 the http-Server will respond by sending a copy of the html webpage - which is stored and updated on the ESP. The html-``String'' is updated in the 
-meantime constantly by the ``main''-program. Using C-string modifications as sprintf the sensor readings
+meantime constantly by the ``main''-program. Using C-string modifications such as sprintf the sensor readings
 and decisions are being printed to the webpage. This in the current version displays the IR-sensor readings
 and the current decisions (like, for example, which correction is being made.) What in the end is being 
 printed to the webpage can be easily decided by the user and adjusted in the \texttt{ir\_sensor\_put\_web-function}.

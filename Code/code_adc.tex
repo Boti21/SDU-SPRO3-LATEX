@@ -4,12 +4,12 @@
 \begin{document}
     \subsection{ADC}
     When programming the ability to use a ADC (Analog to digital converter) to
-    read a analog value on the microprocessor is of crucial impotents. In our
+    read a analog value on the microprocessor is of crucial importance. In our
     project the ADC is use for reading values from our infrared and load
     sensors. On the ESP32 a total of 18 ADC channels are available with a config
     resolution options of 9,10,11 and 12-bits.
     \subsubsection{Configuring}
-    It is impotent to ensure when using RTOS that functions are Thread safe. If
+    It is important to ensure when using RTOS that functions are Thread safe. If
     not it can result in RTOS not being able to handle a task in the desired
     time frame. For this reason the libraries that are
     include in the ESP-IDF environment that are designed with thread safe in
@@ -27,7 +27,7 @@
         ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &adc1_handle));
     \end{lstlisting}
 
-    The program utilize handles to reference the objected throughout the
+    The program utilizes handles to reference the objectets throughout the
     program. When $calling\ adc\_oneshot\_new\_unit$ a new instance is created with
     the specified configuration. In a similar way the channels are configured
     and created to the handle.

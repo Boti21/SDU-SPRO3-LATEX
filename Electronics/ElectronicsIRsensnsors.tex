@@ -12,7 +12,7 @@ floor types possible (TEKExpo floor is, for example, different from the one in t
 The chosen model combines 8 IR-LEDs with 8 photoresistors. The output is an analog voltage. One for each photoresistor.
 The final forklift has two of these arrays. One mounted in the front and one in the back - mounted
 close to the floor (see picture). The distance has been determined over several rounds of testing 
-including different materials. The amount and placing of the arrays allows the forklift to easily detect
+including different materials. The number and placement of the arrays allows the forklift to easily detect
 how it is placed on the line and to detect intersections.  
 \begin{figure}[h!]
     \centering
@@ -24,7 +24,7 @@ However, using the analog variant requires all of the 16 outputs to be connected
 Even though the chosen microcontroller has 18 measurement channels, not all of them are available to use.
 For example, about half of all channels can only be used while the WiFi-functionalities of the chip are not used.
 Why this is problematic will become clear in the section ``Connectivity and Communication'' in the code section.
-Moreover, other pins are simply not available to use, simply because they shared between ADC and other modules.
+Moreover, other pins are simply not available to use, simply because they are shared between ADC and other modules.
 Additionally, some ADC pins are also required for monitoring the battery voltage and the weight on the fork.
 Consequently, it is impossible to have all of them connected at the same time. However, what cannot be done 
 simultaneously can be done sequentially. To see be able to read all the analog outputs multiplexers are used.

@@ -19,7 +19,7 @@ dimensions.
 In accordance to the set requirements, the forklift should at least lift 3.5kg.
 Hence, the loadcells should be able to withstand this weight. 
 Next to buying new loadcells, one possible option is to take the loadcells
-out of a kitchen weight rated for that weight. This is beneficial in serveral aspects.
+out of a kitchen scale rated for that weight. This is beneficial in serveral aspects.
 Not only does it give a insight into reverse engineering, but also provides beneficial
 insight in classifying unknown sensor characteristics. Furthermore, it does not 
 stress the budget. 
@@ -117,7 +117,7 @@ Thus, after the first step of the engineering method - evaluation of options -
 designs were made an tested.
 It also was decided to omit the constant current source, as this would have been an 
 overcomplicated setup. The calculations done showed that with a voltage source of 3.3V
-the current through the loadcells would not the range of a few mA. This was also backed
+the current through the loadcells would be in the range of a few mA. This was also backed
 by simulations of equivalent voltage dividers in LTSpice.
 The following picture shows a first working prototype - back then the setup included just one loadcell. 
 \begin{figure}[H]
@@ -170,7 +170,7 @@ Through testing it has been determined that the output can be approximated
 by an ideal-straight line. The sensitivity has then be determined by putting no load
 and 500g (centered) on the fork. Then the corresponding conversion functions have been 
 implemented in code - see coding section.
-While calibrating it was also noticed that the initial gain of the op amp is to strong as it 
+While calibrating it was also noticed that the initial gain of the op amp is too strong as it 
 surpasses the ESP32´s ADC range.
 The weight of the fork itself biases the wheatstone bridge. This is, of course, also amplified.
 Thus, the gain resistor was adjusted slightly to decrease the gain.
