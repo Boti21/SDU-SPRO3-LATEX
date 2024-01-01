@@ -7,7 +7,7 @@
 Text about the implementation of the Ultrasonic sensors here.
 The ultrasonic sensor uses sonar to determine the distance to an object. 
 The sensor reads from 2cm to 400 cm with an accuracy of 0.3cm. To calculate
- the distance from the sensor to the object, a function in c was created. 
+ the distance from the sensor to the object, a function was created. 
  The function explained is the following:
 
  \begin{lstlisting}[language=c,caption={The TRIG pin's Code},label={code:ultrasonic}]
@@ -62,7 +62,7 @@ To get the time that the Echo pin is high, the code below was used:
 The timer was started when the Echo pin was set high, and it was
  stopped when the Echo pin was low.
 
- \begin{lstlisting}[language=c,caption={The timer's codeh},label={code:ultrasonic}]
+ \begin{lstlisting}[language=c,caption={The timer's code},label={code:ultrasonic}]
     
     // Start timer 
     gptimer_start(timer);
