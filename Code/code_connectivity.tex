@@ -130,10 +130,8 @@ repository (\url{https://github.com/Boti21/SDU-SPRO3-CODE/blob/dev/web_frontend/
 It has a meta statement that causes the web browser to request a new version of the page.
 The request will be answered by the http-Server. 
 
-In order to communicate with the forklift there were three options: via Bluetooth, via Wi-Fi or with 
-esp32 now. The esp32 can create a network where there is an access of a webpage where the user can 
-communicate with the forklift. The website was created in html and CSS. On the website, the user can 
-start and stop the forklift with two different buttons: 
+On the website, the user can not only see the sensor readings and decisions that the forklift is doing,
+starting and stopping the forklift is also possible with two different buttons: 
 
 \begin{lstlisting}[language=html,caption={The buttons' Code},label={code:webpage}]
     
@@ -143,11 +141,12 @@ start and stop the forklift with two different buttons:
             <h1>Connect to the forklift!</h1>
             <p> You can start or stop the forklift pressing the buttons:</p>
             <button class="button button1">START </button>
-            <button class="button button2">STOP </button>
-
-   
+            <button class="button button2">STOP </button>   
 
 \end{lstlisting}
-
+The website also gives the option to send a desired pallet drop off place to the forklift. However,
+the backend is not yet working reliably, so in the working forklift prototype the drop of place has to be
+entered by the means of code. (There is a bug where the send data includes random characters at the end of the string
+send by the connected device).
 
 \end{document}
