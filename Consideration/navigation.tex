@@ -8,7 +8,7 @@
 The forklift has to find its way around in the real world. In the end it should
 according to the project requirements find and drive to a pallet space. 
 
-\textbf{Unfinished}
+
 \begin{table}[H]
     \centering
         \begin{tabularx}{\linewidth}{L|L|L|L|L}
@@ -102,6 +102,13 @@ according to the project requirements find and drive to a pallet space.
     \caption{Navigation methods}
     \label{tab:my_label}
 \end{table}
+
+Other researched options include using the ESP32 UWB and WPS - both methods have
+a similar approach as the Bluetooth-method.
+
+However, it was decided to go with the lines on the floor. As this comes with the 
+most advantages that fit to the system and is also a applied in industry warehouse robots.
+Additionally, it also allows to focus on (analog) sensors, which is a goal of this project.
     
 
 \end{document}
