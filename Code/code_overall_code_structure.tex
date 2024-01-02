@@ -3,8 +3,11 @@
 
 \begin{document}
 
-\subsection{Overall code structure}
-Overall code structure here - how does the program entirely work. For what we need
-the following parts:
+\subsection{General Software Design and usage of CPU cores}
+The chosen microcontroller offers two cores. The highest priority to enable
+safe operation is keeping the forklift up-to-date with what happens around it.
+Therefore, one CPU core (CPU1) has been dedicated just to sensor readings while CPU0 handles
+communication, decision making and other tasks that keep the forklift running. 
+The different parts of the program are explained in the following:
 
 \end{document}
