@@ -1,0 +1,57 @@
+\documentclass[report.tex]{subfiles}
+
+\begin{document}
+
+All in all this project has been successful. Both in terms of the specified requirements and the learning objectives.
+
+\subsection{Requirements}
+
+The only requirements that were left unfulfilled are related to hardware limitations.
+These were object avoidance, a self-made motor driver board and pallet pick up functionality.
+
+\subsubsection{Object avoidance}
+
+The code implementation is done and it has been tested but the ESP32 just did not have enough pins to support the ultrasonic sensors.
+This problem arose late in the development process and therefore could not be remedied in time. Potential solutions include having 
+another multiplexer but since the ultrasonic sensor readings rely on timing the synchronisation of them would have proven to be 
+quite a time consuming challenge.
+
+\subsubsection{Motor driver}
+
+The PCB was designed and manufactured by the university but due to an accident when soldering the copper various planes were bridged
+and made the board unusable without being repaired. This happened too late in the process for the team to be able to dedicate 
+time for this issue, for example the university would not have been able to make it in time.
+Instead two motor drivers were sourced and used. These did also use the same chip as the in-house design. 
+
+\subsubsection{Picking up pallets}
+
+This requirement remained unfulfilled due to a hardware failure. One of the IR sensor array started malfunctioning 
+after a pin header was soldered to it. Some of the 8 sensors stopped working completely, other ones changed their output
+ranges and altered their output curves rendering the whole array mostly unusable. This problem was encountered after the 
+budget has been spent and the development process entered the final stage, therefore the part could not be switched.
+This was a problem because the moving direction needs one of the two IR arrays as inputs and when the forklift reverses
+the other sensor array has to be used, which was impossible. This made it so that the vehicle could not reliably change directions
+and pick up pallets.
+
+\subsection{Learning objectives}
+
+The team management system worked well to distribute tasks and keep track of their completion. With it the team members could 
+work on every aspect of the project and hone their skills in all applied disciplines.
+
+
+The circuit designs allowed the team to use the knowledge acquired during the semester, while mechanically valuable experience
+was gained regarding embedding sensors into a model and the usage of high-strength materials such as stainless steel.
+
+
+The coding was an opportunity to seriously use a version management software with multiple users editing source code, and 
+also to use, a more complex, real time operating system alongside a website. These provided valuable experience to all who worked on them.
+
+\subsection{The engineering method}
+
+The team tried its best at adhering to the principles of the engineering method. This can be seen in most every aspect of the project
+but there are some mistakes that were discovered just too late and could not be corrected or accounted for with the limited budget and
+time-frame available.
+
+
+
+\end{document}
