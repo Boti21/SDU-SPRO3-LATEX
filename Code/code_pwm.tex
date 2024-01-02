@@ -5,7 +5,7 @@
 \maketitle
 
 \subsection{PWM}
-In order to control the drive and mast Motors we used the L298n motor drivers which require 
+In order to control the drive and mast motors we used the L298n motor drivers which require 
 a pwm signal for the speed selection. 
 We control the speed of the motors by changing the duty cycle of the signal, as the drivers 
 take than the average in percentage and make that the output voltage. Then a signal with duty 
@@ -123,4 +123,5 @@ void pwm_set(int motor, int duty){
     ledc_timer_resume(LEDC_LOW_SPEED_MODE, motor);
 }
 \end{lstlisting}
+The pwm-set function is then used in other functions - the drive functions - these can be found in the \texttt{FL\_drive.h} header file in SPRO3-Firmware.
 \end{document}
