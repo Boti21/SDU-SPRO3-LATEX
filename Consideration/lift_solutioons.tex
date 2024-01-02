@@ -35,14 +35,14 @@ For lifting a hydraulic piston pushes a roller bearing up with a chain connected
 it and connected with the fork on the other side. This creates a 2to1 lifting ratio where, 1meter lifted piston lifts the 
 fork up 2meters.
 \subsubsection{Lifting solutions}
-Because of the high cost, low weight of load we will carry and not having the focus on a acurate downscalled 
+Because of the high cost, low weight of load we will carry and not having the focus on a accurate down-scaled 
 forklift we will not be able to use a hydraulic system for lifting.
 Using a roller-chain should be considered in each solution for better load distribution and less movement need due to the 2to1
 ratio.
 Options can be:
 \begin{enumerate}
     \item Linear Actuator(Bought)
-    \item Linear Actuator(own design)(threaded rod)
+    \item Linear Actuator(own design)(lead screw) (threaded rod in Figure 8)
     \item string+bearing 
     \item rack gear and pinion
     \item //any combination out of those for higher stages
@@ -50,10 +50,18 @@ Options can be:
 As our focus in this project lays on sensors and autonomous driving a Simplex stage 1 forklift will be enough of a mechanical 
 task and could be upgraded if there is time to fill. 
 Solutions could look like:
-\begin{center}
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.9\textwidth]{../image/Liftsolutions1.png}
+    \caption{Sketches: Lifting Solutions1}
+\end{figure}
+   
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.9\textwidth]{../image/Liftsolutions2.png}
-\end{center}
+    \caption{Sketches: Lifting Solutions1}
+\end{figure}
+
 \subsubsection{Lifting Calculations}
 To add a first value of safety the chosen system should be able to lift at least 30\% (to be defined by a standard later) more than the maximum weight
 specification of our forklift. In this way we account for variances and fatique of the components we are working 
