@@ -3,7 +3,10 @@
 
 \begin{document}
 
-\subsection{LCD}
-Here the text for the LCD
+\subsection{OLED}
+The screen was using the I2C protocol to communicate with the MCU and a driver was needed. Luckily there was one on Github which was sufficient but when multiple subsystems
+were connected to the ESP32 there were no pins left for the OLED and hence it was not a priority to have it, further implementation and work
+on it was halted. The final version of the code does have functions and logic to use it and display the weight of the pallet
+and the battery voltage.
 
 \end{document}
